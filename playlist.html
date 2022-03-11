@@ -1,0 +1,362 @@
+<html>
+<head>
+	<title>Student Playlist</title>
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+	
+	<style>
+		*  {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+		}
+
+		body {
+			background: #FEC8D8;
+		}
+
+		.container {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+
+		.container span {
+			display: block;
+		}
+
+		.text1 {
+			color: white;
+			font-size: 60px;
+			font-weight: 700;
+			letter-spacing: 8px;
+			margin-bottom: 20px;
+			background: #FEC8D8;
+			position: relative;
+			animation: text 3s 1;
+		}
+
+		.text2 {
+			font-size: 30px;
+			color: #957DAD;
+			font-family: Georgia, serif;
+		}
+
+		@keyframes text {
+			0% {
+				color: #957DAD;
+				margin-bottom: -40px;
+			}
+
+			30% {
+				letter-spacing: 25px;
+				margin-bottom: -40px;
+			}
+
+			85% {
+				letter-spacing: 8px;
+				margin-bottom: -40px;
+			}
+		}
+		
+		a:link {
+		  font-family: sans-serif ;
+		  font-weight: 600;
+		  text-decoration: none;
+		}
+	   #topBar {
+		 position: absolute;
+		 padding: 0%;
+		 left: 0.01px;
+		 top: 0.01px;
+		 width: 98.65vw;
+		 height: 3em;
+	   }
+
+
+	  #butt1 {
+		color:white;
+		position: absolute;
+		right: 22em;
+		top: 1em;
+	  }
+	  #butt2 {
+		position: absolute;
+		right: 14em;
+		top: 1em;
+	  }
+	  #butt3 {
+		position: absolute;
+		right: 8em;
+		top: 1em;
+	  }
+	  #button4 {
+		  position: absolute;
+		  left: 1.3em;
+		  top: 0.9em;
+	  }
+
+	  .dropbtn {
+  background-color: #957DAD;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  font-face: Georgia, serif;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  top: 1.03em;
+  right: 0.7em;
+
+}
+.dropdown-content {
+
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 120px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #957DAD;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #957DAD;}
+
+
+
+	    .flex-wrapper {
+    display: flex;
+    height: 5px;
+  }
+
+  .tag {
+    margin-right: 2px;
+    transition: margin 0.4s ease-in-out;
+    background-color:"#FEC8D8" ;
+  }
+
+  .tag:hover {
+    margin-top: -10;
+  }
+
+	  #playlist1 {
+		  position:absolute;
+		  top:15em;	
+		  font-family: Georgia;
+		  font-size: 40px;
+		  font-weight: 500;		  
+	  }
+
+	  #play {
+		  color: black;
+		  font-family: Georgia, serif;
+		  font-size: 20px;
+		  font-weight: 500;			
+	  }
+
+	  table {
+		  padding:45;
+		  border-spacing: 25;
+		  color:white;
+	  }
+	  
+	  td {
+		  padding:30;
+	  }
+
+	  #one {
+		  position:absolute;
+		  top: 102em;
+		  left: 9em;
+		  font-size: 15px;
+	  }
+
+	#two {  
+		position: absolute;	
+		  top: 102em;
+		  left: 34.5em;
+		  color:#957DAD;
+		  font-size: 15px;
+	  }
+
+	  #three {
+		  position:absolute;
+		  top: 102em;
+		  left: 60em;
+		  font-size: 15px;
+	  }
+
+	  #four {
+		  color:black;
+		  font-family: Serif, Georgia;
+		  font-weight: 500;
+		  font-size: 15px;
+	  }
+
+	  #five {
+		  font-family: sans-serif;
+		  color:#957DAD;
+		  font-weight: 600;
+		  font-size: 20px;
+	  }
+
+	  #bottomBar {
+		 position: absolute;
+		 padding: 0%;
+		 left: 0.01px;
+		 top: 125em;
+		 width: 98.65vw;
+		 height: 3em;
+	   }
+
+	   #button5{
+		color:white;
+		position: absolute;
+		right: 7.27em;
+		top: 126em;
+	  }
+
+	  #button6 {
+		position: absolute;
+		right: 4.5em;
+		top: 126.1em;
+	  }
+
+	  #button7 {
+		position: absolute;
+		right: 2em;
+		top: 125.95em;
+	  }
+	  #button8 {
+		  position: absolute;
+		  left: 1.3em;
+		  top: 126em;
+	  }
+
+
+
+	  </style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<span id="stocks" class="text1">Student Playlist</span>
+			<span class="text2">Listen to your mood</span>
+		</div>
+	</div>
+
+	
+	<div>
+		<img src="color.jpeg" id="topBar">
+		<p id="butt1"> <a href="introductions.html" style="color: white;">About</a> </p>
+		<p id="butt2"> <a href="suggestions.html" style="color: white;">Suggestions</a> </p>
+		<p id="butt3"> <a href="play.html" style="color: white;">Playlists</a> </p>
+		<p id="button4"><a href="playlist.html" style=" color: white; letter-spacing: 4px; font-size: larger;">Student Playlist</a></p>
+	</div>
+
+	<div class="dropdown" style="float:right">
+  <button class="dropbtn"><b>My Account</b></button>
+  <div class="dropdown-content">
+    <a href="Login.html">Login</a>
+    <a href="Signup.html">Sign up</a>
+  </div>
+</div>
+
+
+	<div id="playlist1">
+		<table align="center" bgcolor="#957DAD">
+		<div class="flex-wrapper">
+			<tr>
+				 <td bgcolor="#FEC8D8"><div class="tag"><a href="mood1.html" target="_blank"><img src="i1.png" width= 200em align="center"><br>
+					<br><center id="play">You haven't started studying for tomorrow's test</center></a></td></div>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood2.html" target="_blank"><img src="i2.png" width= 200em align="center"><br>
+					<br><center id="play">You are the batch that hasn't ever seen college</center></a></td></div>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood3.html" target="_blank"><img src="i3.png" width= 200em align="center"><br>
+					<br><center id="play">You feel like an imposter in your own degree</center></a></td></div>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood4.html" target="_blank"><img src="i4.png" width= 200em align="center"><br>
+					<br><center id="play">You knew all the answers in the test but still scored less</center></a></td></div>
+			</tr>
+			<tr>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood5.html" target="_blank"><img src="i5.png" width= 200em align="center"><br>
+					<br><center id="play">New semester, new start</center></a></td></div>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood6.html" target="_blank"><img src="i6.png" width= 200em align="center"><br>
+					<br><center id="play">You graduate today finally</center></a></td></div>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood7.html" target="_blank"><img src="i7.png" width= 200em align="center"><br>
+					<br><center id="play">You always miss deadlines</center></a></td></div>
+				<td bgcolor="#FEC8D8"><div class="tag"><a href="mood8.html" target="_blank"><img src="i8.png" width= 200em align="center"><br>
+					<br><center id="play">Your college organizes a fest</center></a></td></div>
+			</tr>
+		</div>
+		</table>
+	</div>
+
+	<div>
+		<div id="one"><img src="u1.jpeg" height=220em>
+			<center>
+				<p id="five">
+					<br> 
+						Music for your mood
+				</p>
+				<p id="four">
+						For whichever mood, a playlist for <br>
+						you is waiting here. With various <br>
+						playlists to pick from, you will never<br>
+						be bored.	
+				</p>
+			</center>
+		</div>
+		<div id="two"><img src="u3.jpeg" height=220em>
+			<center>
+				<p id="five">
+					<br>
+						 Vibe anywhere, anytime
+				</p>
+				<p id="four">
+					Add these playlists to your Spotify <br>
+					or Youtube music and listen to them<br>
+					at your ease, anywhere and anytime.
+				</p>
+			</center>
+		</div>
+		<div id="three"><img src="u4.jpeg" height=220em>
+			<center>
+				<p id="five">
+					<br>
+						Perfect to share 
+				</p>
+				<p id="four">
+					Share these playlists with your<br>
+					friends! Bond over your music<br>
+					and moods at the same time.
+					
+					
+				</center></br></p></div>
+	</div> 
+
+
+		<img src="color.jpeg" id="bottomBar">
+		<p id="button5"> <a href="https://www.instagram.com/anamika_basu02/" target="_blank" style="color: white;"><img src="insta.png" alt="insta" width="20" height="20"></a> </p>
+		<p id="button6"> <a href="mailto: monjas2002@gmail.com" target="_blank" style="color: white;"><img src="email.png" alt="gmail" width="24" height="17"></a> </p>
+		<p id="button7"> <a href="https://open.spotify.com/playlist/6ekEbODeDxuZcQWJCCYLEe?si=EKPMAEkpQxqnJ997e294Fw&utm_source=whatsapp&nd=1" target="_blank" style="color: white;"><img src="spotify.png" alt="spotify" width="21" height="21"></a> </p>
+		<p id="button8"><a href="#stocks" style=" color: white; letter-spacing: 4px; font-size: larger;">Student Playlist</a></p>
+	</div>
+
+	
+</body>
+
+</html>
